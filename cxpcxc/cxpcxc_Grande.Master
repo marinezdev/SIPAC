@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="cxpcxc_Grande.master.cs" Inherits="cxpcxc.cxpcxc_Grande" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>SIPAC</title>
+    <link type="text/css" href="css/cxpcxc.css" rel="stylesheet" />
+    <link type="text/css" href="css/menuhrz.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript">
+        history.forward();
+        document.oncontextmenu = function () { return false }
+    </script>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="dvContenedorAplicacion" >
+            <div id="dvCajaLogo" style="width: 100%; height: 120px; background-color: #105e8e;">
+                <table style ="width:100%">
+                    <tr>
+                        <td><img src="img/asae.jpg" style="height: 115px; width: 250px" /></td>
+                        <td style ="text-align :center; color :white">
+                            <h2>SISTEMA DE PAGOS Y COBRANZA</h2><br />
+                            <b><u><asp:Label ID="lbMstEmpresa" runat="server" Font-Size="15px"  ></asp:Label></u></b>
+                        </td>
+                        <td style ="text-align:right">
+                            <img id ="ImgLogo" src="img/logo_asae.png" style="height: 115px; width: 225px" runat ="server"   />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style=" text-align :right;background-color:#D7E4F2; width :100%;height:30px;"">
+                <b><asp:Label ID="lbMstNombreUsuario" runat="server" ForeColor="#102167" Font-Size="12px"></asp:Label></b> 
+            </div>
+            <div id="dvCajaAreaTrabajo"  margin: auto;">
+                <asp:ContentPlaceHolder ID="cphAreaTrabajo" runat="server"></asp:ContentPlaceHolder>
+            </div><br />
+        </div>
+        <div id="dvCajaPie" style="width: 1000px; margin: auto;text-align :center;font-size :12px; color :blue">
+              <p><b>-   Seguimos trabajando para atenderte mejor  - <br /> SIPAC </b></p>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SipacCorreo.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="correoServidor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">srvexch01.asaec.corp</Value>
+    </Setting>
+    <Setting Name="correoPuerto" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="correoUsuario" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sipac@asae.com.mx</Value>
+    </Setting>
+    <Setting Name="correoClave" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Cntrl2016_</Value>
+    </Setting>
+    <Setting Name="correoNombre" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ASAEC\sipac</Value>
+    </Setting>
+    <Setting Name="horario" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">9,19</Value>
+    </Setting>
+    <Setting Name="Dias" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1,2,3,4,5</Value>
+    </Setting>
+    <Setting Name="errLog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Proyectos\asae\cxpcxc\Aplicacion\SipacCorreo\errlog.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

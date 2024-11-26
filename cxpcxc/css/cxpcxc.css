@@ -1,0 +1,206 @@
+﻿body {
+    background-color: #e8e8e8;
+    background-image: url(../img/bg.jpg);
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 75%;
+    color: #666666;
+}
+
+/*Caja Aplicacion*/
+.CajaAplicacion{ 
+    /*width:1400px;*/ 
+    width:1500px;
+    min-height:600px;
+    margin:auto; 
+    background-color:white;
+    -webkit-box-shadow: 7px 7px 50px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 7px 7px 50px 0px rgba(0,0,0,1);
+    box-shadow: 7px 7px 50px 0px rgba(0,0,0,1);
+}
+
+/*Caja de Login*/
+.CajaLogin{
+    width:380px;
+    margin:auto;
+    background-color: #E8E8E8;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border: 1px solid ;
+}
+
+ /* Ini Text inputs*/
+input[type=text] { padding:3px; border:2px solid #ccc; -webkit-border-radius: 5px; border-radius: 5px; }
+input[type=text]:focus { border-color:#333; }
+
+input[type=Password] { padding:3px; border:2px solid #ccc; -webkit-border-radius: 5px; border-radius: 5px; }
+input[type=Password]:focus { border-color:#333; }
+
+select { padding:3px; border:2px solid #ccc; -webkit-border-radius: 5px; border-radius: 5px; font-size: 12px; }
+select:focus { border-color:#333; }
+
+/* Ini --- Botones*/
+.button {
+    padding: 3px 7px;
+    border: 1px solid #DBE1EB;
+    font-size: 14px;
+    font-family: Arial, Verdana;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    background: #4972B5;
+    background: linear-gradient(left, #4972B5, #618ACB);
+    background: -moz-linear-gradient(left, #4972B5, #618ACB);
+    background: -webkit-linear-gradient(left, #4972B5, #618ACB);
+    background: #4972B5;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 30px;
+}
+  
+.button:hover {
+    background: #365D9D;
+    background: linear-gradient(left, #365D9D, #436CAD);
+    background: -moz-linear-gradient(left, #365D9D, #436CAD);
+    background: -webkit-linear-gradient(left, #365D9D, #436CAD);
+    background: -o-linear-gradient(left, #365D9D, #436CAD);
+    color: #FFFFFF;
+    border-color: #FBFFAD;
+}
+
+/* Fin --- Botones*/
+
+/* Ini --- Caja captura */
+fieldset
+{
+    border: 1px solid #A9A9A9;
+    background-color: #F2F2F2;
+    box-shadow:0 0 10px #999;
+    min-height: 150px;
+}
+legend
+{
+    color: #FFFFFF;
+    background: #00853E;
+    border: 1px solid #00853E;
+    padding: 2px 6px;
+}
+/* Fin --- Caja captura */
+
+.modalBackground {
+    background-color:gray;
+    filter: alpha(opacity=40);
+    opacity: 0.5;
+}
+
+.modalPopup {
+    border: 3px solid Gray;
+    background-color: #F2F2F2;
+    padding: 3px;
+    width: 750px;
+}
+
+
+.Titulos {
+    color: #FFFFFF;
+    background-color: #4972B5;
+    font-size:15px;
+}
+
+.SubTitulos {
+    color: #FFFFFF;
+    background-color: #CCCCFF;
+    font-size:14px;
+}
+
+/*.tblFiltrar {
+    font-size: 10px;
+    background-color:white;
+    border-color:#4f93e3;
+    border-style:solid;
+    width:95%;
+    border-collapse:collapse;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.tblFiltrar td { padding: 1px; border-spacing: 0; border-color:#94b6e8;}
+.tblFiltrar th { padding: 1px; border-spacing: 0; border-color:#4f93e3; color:white; }
+.tblFiltrar thead { background-color:#94b6e8; color:black; height:20px; }
+.tblFiltrar tbody { background-color:White; color:#4f93e3; }
+.hover_row { background-color:#e8e8e8;}
+.highlightRow { background-color:yellowgreen; }*/
+
+.tblFiltrar { font-family: Verdana, sans-serif; font-size: 10px; background-color: white; border-color: #4f93e3; border-style: solid;border-width: 1px; width: 95%; 
+                border-collapse: collapse; margin: 0 auto; cursor: pointer;}
+.tblFiltrar caption { padding: 0 .4em .4em; text-align: left; font-size: 1em; font-weight: bold; text-transform: uppercase; color: #333333; background-color: #d9d9d9; }
+.tblFiltrar thead { background-color: #94b6e8; height: 30px; }
+.tblFiltrar th { padding: 1px; border-spacing: 0; border-color: #4f93e3; border-style: solid; border-width: 1px; color: white; border-bottom: solid 1px #000000; }
+.tblFiltrar td { padding: 1px; border-spacing: 0; border-color: #94b6e8; border-style: solid; border-width: 1px; color: black; }
+.tblFiltrar tbody { background-color: White; }
+.tblFiltrar tbody tr:hover td { background-color: #d5ffa5; }
+
+.hover_row { background-color:#e8e8e8;}
+.highlightRow { background-color:yellowgreen; }
+
+.tblConsulta {
+    background :#F3F9FE;
+    border: 1px solid Gray;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+}
+.tblConsulta td { border:hidden; }
+
+
+.cal_Theme1 .ajax__calendar_container   {
+background-color: #DEF1F4;
+border:solid 1px #77D5F7;
+}
+.cal_Theme1 .ajax__calendar_header  {
+background-color: #ffffff;
+margin-bottom: 4px;
+}
+.cal_Theme1 .ajax__calendar_title,
+.cal_Theme1 .ajax__calendar_next,
+.cal_Theme1 .ajax__calendar_prev    {
+color: #004080;
+padding-top: 3px;
+}
+.cal_Theme1 .ajax__calendar_body    {
+background-color: #ffffff;
+border: solid 1px #77D5F7;
+}
+.cal_Theme1 .ajax__calendar_dayname {
+text-align:center;
+font-weight:bold;
+margin-bottom: 4px;
+margin-top: 2px;
+color: #004080;
+}
+.cal_Theme1 .ajax__calendar_day {
+color: #004080;
+text-align:center;
+}
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_month,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_year,
+.cal_Theme1 .ajax__calendar_active  {
+color: #004080;
+font-weight: bold;
+background-color: #DEF1F4;
+}
+.cal_Theme1 .ajax__calendar_today   {
+    font-weight:bold;
+}
+.cal_Theme1 .ajax__calendar_other,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_today,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_title {
+color: #bbbbbb;
+}
+/*.cal_Theme1 .ajax__calendar_invalid 
+{
+    background-color:gray;
+    color:White; 
+    text-decoration:none; 
+    cursor:default;
+}*/

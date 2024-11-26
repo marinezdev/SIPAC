@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="cxpcxc.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="correoNombre" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ASAEC\sipac1</Value>
+    </Setting>
+    <Setting Name="correoUsuario" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sipac@asae1.com.mx</Value>
+    </Setting>
+    <Setting Name="correoClave" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Cntrl2016_1</Value>
+    </Setting>
+    <Setting Name="errLog" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\RMF\ASAE\Proyectos\GIT\SIPAC_V0\cxpcxc\errLog\</Value>
+    </Setting>
+    <Setting Name="correoServidor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">172.161.1001.172</Value>
+    </Setting>
+    <Setting Name="correoPuerto" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2500</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>cxpcxc_db</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{0ccf33d7-9fc7-4ffe-ab13-1d15289e7363}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>cxpcxc_db</RootNamespace>
+    <AssemblyName>cxpcxc_db</AssemblyName>
+    <ModelCollation>3082,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Modern_Spanish_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\trf_NotaCreditoAsignacion.sql" />
+    <Build Include="dbo\Tables\cat_CondicionPagoCtrl.sql" />
+    <Build Include="dbo\Tables\trf_NotaCreditoArchivos.sql" />
+    <Build Include="dbo\Tables\trf_NotaCredito.sql" />
+    <Build Include="dbo\Tables\cat_Proveedor.sql" />
+    <Build Include="dbo\Tables\trf_AutorizacionTemporal.sql" />
+    <Build Include="dbo\Tables\cat_ProveedorCtrl.sql" />
+    <Build Include="dbo\Tables\cat_Proyectos.sql" />
+    <Build Include="dbo\Tables\cxc_Facturas.sql" />
+    <Build Include="dbo\Tables\cat_Clientes.sql" />
+    <Build Include="dbo\Tables\cat_ProyectosCtrl.sql" />
+    <Build Include="dbo\Tables\cat_Rechazos.sql" />
+    <Build Include="dbo\Tables\cat_RechazosCtrl.sql" />
+    <Build Include="dbo\Tables\cat_UnidadNegocio.sql" />
+    <Build Include="dbo\Tables\cat_UnidadNegocioCtrl.sql" />
+    <Build Include="dbo\Tables\CuentasProveedor.sql" />
+    <Build Include="dbo\Tables\trf_SolicitudCtrl.sql" />
+    <Build Include="dbo\Tables\trf_SolicitudLlave.sql" />
+    <Build Include="dbo\Tables\trf_SolicitudRechazo.sql" />
+    <Build Include="dbo\Tables\usrctrl.sql" />
+    <Build Include="dbo\Tables\usuario.sql" />
+    <Build Include="dbo\Tables\cat_Instalaciones.sql" />
+    <Build Include="dbo\Tables\InstalacionesClientes.sql" />
+    <Build Include="dbo\Tables\trf_Archivos.sql" />
+    <Build Include="dbo\Tables\trf_SolicitudFondos.sql" />
+    <Build Include="dbo\Tables\trf_SolicitudFondosCtrl.sql" />
+    <Build Include="dbo\Tables\EmpresasClientes.sql" />
+    <Build Include="dbo\Tables\trf_SolicitudFondosDetalle.sql" />
+    <Build Include="dbo\Tables\xx_OrdenCompra.sql" />
+    <Build Include="dbo\Tables\xx_OrdenCompraCtrl.sql" />
+    <Build Include="dbo\Tables\cat_CondicionPago.sql" />
+    <Build Include="dbo\Tables\trf_ArchivoFondos.sql" />
+    <Build Include="dbo\Tables\cxc_ArchivoContrato.sql" />
+    <Build Include="dbo\Tables\cxc_Archivos.sql" />
+    <Build Include="dbo\Tables\cxc_Bitacora.sql" />
+    <Build Include="dbo\Tables\cxc_LlaveCFD.sql" />
+    <Build Include="dbo\Tables\cxc_OrdenFacturaCtrl.sql" />
+    <Build Include="dbo\Tables\cxc_OrdenServicioCtrl.sql" />
+    <Build Include="dbo\Tables\cxc_PartidasFactura.sql" />
+    <Build Include="dbo\Tables\cat_ClientesCtrl.sql" />
+    <Build Include="dbo\Tables\cxc_GrupoPagoCtrl.sql" />
+    <Build Include="dbo\Tables\cxc_GrupoPago.sql" />
+    <Build Include="dbo\Tables\cxc_OrdenFactura.sql" />
+    <Build Include="dbo\Tables\cxc_OrdenServicio.sql" />
+    <Build Include="dbo\Tables\cat_Servicios.sql" />
+    <Build Include="dbo\Tables\trf_BitacoraEventos.sql" />
+    <Build Include="dbo\Tables\trf_ConciliarPagoCtrl.sql" />
+    <Build Include="dbo\Tables\trf_ConciliarPago.sql" />
+    <Build Include="dbo\Tables\xx_CatArticulos.sql" />
+    <Build Include="dbo\Tables\xx_ArticulosOrdenCompra.sql" />
+    <Build Include="dbo\Tables\cat_Empresas.sql" />
+    <Build Include="dbo\Tables\cat_AccesoEmpresas.sql" />
+    <Build Include="dbo\Tables\BitacoraSolicitud.sql" />
+    <Build Include="dbo\Tables\trf_Solicitud.sql" />
+    <Build Include="dbo\Functions\ReporteContabilidad.sql" />
+    <Build Include="dbo\Functions\ConsultaDireccion.sql" />
+    <Build Include="dbo\Functions\ConsultaSeguimientoLotes.sql" />
+    <Build Include="dbo\Functions\ReportePerfilPagos.sql" />
+    <Build Include="dbo\Functions\PendientesXDiasIngreso.sql" />
+    <Build Include="dbo\Stored Procedures\Administracion_Usuarios_Seleccionar_Validar.sql" />
+    <Build Include="dbo\Stored Procedures\Administracion_Usuarios_Seleccionar_Detalle.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasClientes_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasClientes_Seleccionar_PorEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasClientes_Modificar.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasClientes_Seleccionar_EstadoActual.sql" />
+    <Build Include="dbo\Stored Procedures\Administracion_Usuarios_Modificar_Clave.sql" />
+    <Build Include="dbo\Tables\EmpresasUnidadNegocio.sql" />
+    <Build Include="dbo\Tables\EmpresasProyectos.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasUnidadNegocio_Seleccionar_PorEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasUnidadNegocio_Seleccionar_EstadoActual.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasUnidadNegocio_Modificar.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasUnidadNegocio_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasProyectos_Seleccionar_PorEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasProyectos_Seleccionar_EstadoActual.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasProyectos_Modificar.sql" />
+    <Build Include="dbo\Stored Procedures\EmpresasProyectos_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\trf_Archivos_Seleccionar_NumeroComprobante.sql" />
+    <Build Include="dbo\Stored Procedures\trf_Archivos_Seleccionar_ListaComprobantes.sql" />
+    <Build Include="dbo\Stored Procedures\trf_Archivos_Seleccionar_ImporteTotalComprobantes.sql" />
+    <Build Include="dbo\Stored Procedures\trf_Archivos_Seleccionar_CargaFactura.sql" />
+    <Build Include="dbo\Stored Procedures\trf_Archivos_Seleccionar_CargaComprobante.sql" />
+    <Build Include="dbo\Stored Procedures\trf_Archivos_Seleccionar_ArchivosSolicitud.sql" />
+    <Build Include="dbo\Stored Procedures\trf_Archivos_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Archivos_Seleccionar_NumeroComprobante.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Archivos_Seleccionar_Factura.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Archivos_Seleccionar_DocumentoPago.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Archivos_Seleccionar_ComprobantePorIdOrdenFactura.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Archivos_Seleccionar_Comprobante.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Archivos_Seleccionar_ArchivosSolicitud.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Archivos_Eliminar.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Archivos_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_ArchivoContrato_Seleccionar_PorIdServicio.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_ArchivoContrato_Modificar.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_ArchivoContrato_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_CondicionPago_Seleccionar_ValidarSiExiste_PorIdEmpresa_PorTitulo.sql" />
+    <Build Include="dbo\Stored Procedures\cat_CondicionPago_Seleccionar_PorIdEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cat_CondicionPago_Seleccionar_PorId.sql" />
+    <Build Include="dbo\Stored Procedures\cat_CondicionPago_Seleccionar_ParaLista_PorIdEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cat_CondicionPago_Modificar_Titulo_Dias.sql" />
+    <Build Include="dbo\Stored Procedures\BitacoraSolicitud_Seleccionar_PorIdSolicitud.sql" />
+    <Build Include="dbo\Stored Procedures\BitacoraSolicitud_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proveedor_Seleccionar_SiExiste.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proveedor_Seleccionar_PorIdEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proveedor_Seleccionar_PorEmpresaRFC.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proveedor_Seleccionar_ConSinFactura_PorEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proveedor_Seleccionar_ActivosInactivos_PorEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proveedor_Modificar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proveedor_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Empresas_Seleccionar_Validar_PorRFCNombre.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Empresas_Seleccionar_PorId.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Empresas_Seleccionar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Empresas_Modificar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Empresas_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Rechazos_Seleccionar_SiExiste.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Rechazos_Seleccionar_PorIdEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Rechazos_Seleccionar_PorId.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Rechazos_Seleccionar_Activos_PorIdEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Rechazos_Modificar_Titulo.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Rechazos_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proyectos_Seleccionar_SiExiste.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proyectos_Seleccionar_PorIdEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proyectos_Seleccionar_PorId.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proyectos_Seleccionar_Activos_PorIdEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proyectos_Seleccionar__Activos_PorIdEmpresaIdProyectoGrupo.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proyectos_Seleccionar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proyectos_Modificar_Titulo.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Proyectos_Agregar.sql" />
+    <Build Include="dbo\Tables\cat_Moneda.sql" />
+    <Build Include="dbo\Stored Procedures\Usuario_Contar.sql" />
+    <Build Include="dbo\Stored Procedures\trf_NotaCreditoAsignacion_Seleccionar_SolicitudesRelacionadas.sql" />
+    <Build Include="dbo\Stored Procedures\trf_NotaCreditoAsignacion_Seleccionar_Solicitud.sql" />
+    <Build Include="dbo\Stored Procedures\trf_NotaCreditoAsignacion_Agregar_Asignar.sql" />
+    <Build Include="dbo\Stored Procedures\trf_NotaCreditoArchivos_Seleccionar_PorIdNotaCreditoTipo.sql" />
+    <Build Include="dbo\Stored Procedures\trf_NotaCreditoArchivos_Seleccionar_Nombre.sql" />
+    <Build Include="dbo\Stored Procedures\trf_NotaCredito_Seleccionar_SolicitudesRelacionadas.sql" />
+    <Build Include="dbo\Stored Procedures\trf_NotaCredito_Seleccionar_PorIdNotaCredito.sql" />
+    <Build Include="dbo\Stored Procedures\trf_NotaCredito_Seleccionar_NotasCreditoProveedor.sql" />
+    <Build Include="dbo\Stored Procedures\trf_NotaCredito_ModificarEstadoMonto.sql" />
+    <Build Include="dbo\Stored Procedures\trf_NotaCredito_Eliminar.sql" />
+    <Build Include="dbo\Stored Procedures\trf_NotaCredito_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\trf_ConciliarPago_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\trf_BitacoraEventos_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_OrdenServicio_Seleccionar_PorIdServicio.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_OrdenServicio_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_OrdenFactura_TotalProyeccionPorFecha.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_OrdenFactura_SeleccionarPendientesActualizarFechaCompromiso.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_OrdenFactura_Seleccionar_GrupoProyeccion.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_OrdenFactura_Seleccionar_FacturasProyeccion.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_OrdenFactura_Seleccionar_FacturasCobranzaReal.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_OrdenFactura_Seleccionar_CobranzaRealPorProyecto.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_OrdenFactura_Modificar_Estado.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_OrdenFactura_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Bitacora_Seleccionar_PorIdOrdenFactura.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Bitacora_Eliminar.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Bitacora_Agregar_RegistroPago.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_Bitacora_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\CuentasProveedor_Seleccionar_PrimeraCuenta.sql" />
+    <Build Include="dbo\Stored Procedures\CuentasProveedor_Seleccionar_PorId.sql" />
+    <Build Include="dbo\Stored Procedures\CuentasProveedor_Eliminar.sql" />
+    <Build Include="dbo\Stored Procedures\CuentasProveedor_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_UnidadNegocio_Validar_SiExiste.sql" />
+    <Build Include="dbo\Stored Procedures\cat_UnidadNegocio_Seleccionar_PorId.sql" />
+    <Build Include="dbo\Stored Procedures\cat_UnidadNegocio_Seleccionar_Activos_PorEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cat_UnidadNegocio_Seleccionar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_UnidadNegocio_Modificar_Titulo.sql" />
+    <Build Include="dbo\Stored Procedures\cat_UnidadNegocio_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Servicios_Seleccionar_SiExiste.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Servicios_Seleccionar_PorIdEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Servicios_Seleccionar_PorId.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Servicios_Seleccionar_Imagen_PorId.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Servicios_Modificar_Titulo.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Servicios_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_NotaCreditoArchivos_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Moneda_Seleccionar_Nombre_PorAbreviacion.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Clientes_Seleccionar_PorId.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Clientes_Seleccionar_Por_IdEmpresa_RFC.sql" />
+    <Build Include="dbo\Stored Procedures\Usuario_Seleccionar_Detalle.sql" />
+    <Build Include="dbo\Stored Procedures\Usuario_Modificar.sql" />
+    <Build Include="dbo\Stored Procedures\Usuario_Agregar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Moneda_Seleccionar.sql" />
+    <Build Include="dbo\Stored Procedures\cat_Clientes_Seleccionar_PorIdEmpresa.sql" />
+    <Build Include="dbo\Stored Procedures\cxc_OrdenServicioCtrl_Seleccionar_Id.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CifrarClave.sql" />
+    <None Include="UsuarioClave.sql" />
+    <None Include="Agregar registros cat_Moneda.sql" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,965 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7685302D-AE19-42DD-9894-7E99AFF6319F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cxpcxc</RootNamespace>
+    <AssemblyName>cxpcxc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\..\SIPAC_V1\cxpcxc\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2012.Runtime.11.0.3452.0\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2012.Runtime.11.0.3452.0\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2012.Runtime.11.0.3452.0\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admAcceso.aspx">
+      <BrowseToURL>~/admAcceso.aspx</BrowseToURL>
+    </Content>
+    <Content Include="admCatCodicionPago.aspx" />
+    <Content Include="admCatEmpresas.aspx" />
+    <Content Include="admCatFormasPago.aspx" />
+    <Content Include="admCatProyectos.aspx" />
+    <Content Include="admCatRechazos.aspx" />
+    <Content Include="admCatServicios.aspx" />
+    <Content Include="admCatUnidadNegocio.aspx" />
+    <Content Include="admClientesEmpresas.aspx" />
+    <Content Include="admConfirmaAcceso.aspx" />
+    <Content Include="admCuentas.aspx" />
+    <Content Include="admEmpresasProyectos.aspx" />
+    <Content Include="admEmpresasUDN.aspx" />
+    <Content Include="admInfraestructura.aspx" />
+    <Content Include="admProveedor.aspx" />
+    <Content Include="admUsuarios.aspx" />
+    <Content Include="admCatClientes.aspx" />
+    <Content Include="css\dataTables.jqueryui.min.css" />
+    <Content Include="css\start.css" />
+    <Content Include="cxc_AgregaPagoGrupo.aspx" />
+    <Content Include="cxc_AltaOrdenServicio2.aspx" />
+    <Content Include="cxc_AlterarEstadoPartida.aspx" />
+    <Content Include="cxc_ConsultaContabilidad.aspx" />
+    <Content Include="cxc_ConsultaDireccion.aspx" />
+    <Content Include="cxc_ConsultaOrdFactura_Sol_xCliente.aspx" />
+    <Content Include="cxc_PendientesXCobrar.aspx" />
+    <Content Include="cxc_ConsultaOrdFactura_Sol.aspx">
+      <BrowseToURL>~/cxc_ConsultaOrdFactura_Sol.aspx</BrowseToURL>
+    </Content>
+    <Content Include="cxc_ConsultaOrdServicioModificar.aspx" />
+    <Content Include="cxc_OrdenServicioModificar.aspx" />
+    <Content Include="cxc_PendientesCobro.aspx" />
+    <Content Include="cxc_ProyeccionCobranza.aspx" />
+    <Content Include="cxc_RegistroMontosVariables.aspx" />
+    <Content Include="cxc_repCobranzaReal.aspx" />
+    <Content Include="cxc_SeleccionarSolPago.aspx" />
+    <Content Include="cxc_ConsultaOrdServicio.aspx">
+      <BrowseToURL>~/cxc_ConsultaOrdServicio.aspx</BrowseToURL>
+    </Content>
+    <Content Include="cxc_EstadoFacturacion.aspx" />
+    <Content Include="cxc_AgregaPago.aspx">
+      <BrowseToURL>~/cxc_AgregaPago.aspx</BrowseToURL>
+    </Content>
+    <Content Include="cxc_SeleccionaGrupoPago.aspx" />
+    <Content Include="cxc_SolicitudesFacturacion.aspx">
+      <BrowseToURL>~/cxc_SolicitudesFacturacion.aspx</BrowseToURL>
+    </Content>
+    <Content Include="cxc_AltaOrdenServicio.aspx" />
+    <Content Include="cxc_AgregarFacturas.aspx">
+      <BrowseToURL>~/cxc_AgregarFacturas.aspx</BrowseToURL>
+    </Content>
+    <Content Include="cxc_VerOrdenFactura.aspx" />
+    <Content Include="cxc_VerOrdenServicio.aspx" />
+    <Content Include="cxpcxcSeleccionaEmpresa.aspx" />
+    <Content Include="cxpcxcTotales.aspx" />
+    <Content Include="errorsistema.html" />
+    <Content Include="esperaV1.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="img\action_check.png" />
+    <Content Include="img\add.png" />
+    <Content Include="img\arDocto.png" />
+    <Content Include="img\asae.jpg" />
+    <Content Include="img\bgmnu.png" />
+    <Content Include="img\btncancel.png" />
+    <Content Include="img\calendario.png" />
+    <Content Include="img\cancelar.png" />
+    <Content Include="img\Candado_A.png" />
+    <Content Include="img\Candado_C.png" />
+    <Content Include="img\delete.png" />
+    <Content Include="img\descarga.png" />
+    <Content Include="img\descarga_gr.png" />
+    <Content Include="img\Detalle.png" />
+    <Content Include="img\DetalleFact.jpg" />
+    <Content Include="img\dwContrato.png" />
+    <Content Include="img\dwContrato_gr.png" />
+    <Content Include="img\edit.png" />
+    <Content Include="img\email.png" />
+    <Content Include="img\email_gr.png" />
+    <Content Include="img\ExpExcel.png" />
+    <Content Include="img\flag_green.png" />
+    <Content Include="img\Folder_A.png" />
+    <Content Include="img\Folder_C.png" />
+    <Content Include="img\foward.png" />
+    <Content Include="img\imgcxc.png" />
+    <Content Include="img\imgCxp.png" />
+    <Content Include="img\invoice_i.png" />
+    <Content Include="img\LogoSig.png" />
+    <Content Include="img\logo_asae.png" />
+    <Content Include="img\logo_sipac.png" />
+    <Content Include="img\modify.png" />
+    <Content Include="img\nada.png" />
+    <Content Include="img\nc.png" />
+    <Content Include="img\niv_0.png" />
+    <Content Include="img\niv_1.png" />
+    <Content Include="img\niv_2.png" />
+    <Content Include="img\niv_3.png" />
+    <Content Include="img\niv_4.png" />
+    <Content Include="img\niv_5.png" />
+    <Content Include="img\Nota.png" />
+    <Content Include="img\pago.png" />
+    <Content Include="img\search.png" />
+    <Content Include="img\seg facturas.png" />
+    <Content Include="img\Seleccionar.png" />
+    <Content Include="img\sem_A.png" />
+    <Content Include="img\sem_R.png" />
+    <Content Include="img\Sem_V.png" />
+    <Content Include="img\verFac.png" />
+    <Content Include="img\verFac_gr.png" />
+    <Content Include="js\dataTables.jqueryui.min.js" />
+    <Content Include="js\jquery.dataTables.min.js" />
+    <Content Include="js\jquery.timers.js" />
+    <Content Include="menushtml\Captura.html" />
+    <Content Include="menushtml\Consulta.html" />
+    <Content Include="menushtml\Direccion - 200713.html" />
+    <Content Include="menushtml\Facturacion - 200713.html" />
+    <Content Include="menushtml\FacturacionSolicita.html" />
+    <Content Include="menushtml\Presidencia - 200707.html" />
+    <Content Include="menushtml\SubDireccion.html" />
+    <Content Include="menushtml\Facturacion.html" />
+    <Content Include="menushtml\Coordinador.html" />
+    <Content Include="menushtml\Presidencia.html" />
+    <Content Include="menushtml\Direccion.html" />
+    <Content Include="menushtml\Contabilidad.html" />
+    <Content Include="menushtml\AplicacionPago.html" />
+    <Content Include="menushtml\Autorizacion.html" />
+    <Content Include="menushtml\Administrador.html" />
+    <Content Include="menushtml\solicitante.html" />
+    <Content Include="menushtml\systemall.html" />
+    <Content Include="trf_AgregaArchivosSinFactura.aspx" />
+    <Content Include="trf_AgregaMarcaPrioridad.aspx" />
+    <Content Include="trf_AltaNotaCredito.aspx" />
+    <Content Include="trf_AltaSolConFactura.aspx" />
+    <Content Include="trf_AutorizarProcesar.aspx" />
+    <Content Include="trf_AutorizaFondosConsulta.aspx" />
+    <Content Include="trf_AutorizaFondosConsultaDet.aspx" />
+    <Content Include="trf_AutorizarDinamica.aspx" />
+    <Content Include="trf_AutorizarFondos.aspx" />
+    <Content Include="trf_AutorizarFondosDetalle.aspx" />
+    <Content Include="trf_VerSolAutorizacion.aspx" />
+    <Content Include="trf_BuscaEmpresa.aspx" />
+    <Content Include="trf_CambioProveedor.aspx" />
+    <Content Include="trf_ConsultaGralSolicitudes.aspx" />
+    <Content Include="trf_ConsultaNotaCredito.aspx" />
+    <Content Include="trf_MoficarSolicitud.aspx" />
+    <Content Include="trf_VerNotaCredito.aspx" />
+    <Content Include="trf_PagoSolicitud.aspx" />
+    <Content Include="trf_RegistroPagos.aspx" />
+    <Content Include="trf_Rep_pendientes.aspx" />
+    <Content Include="trf_SeguimientoLote.aspx" />
+    <Content Include="trf_AutorizarMarcacion.aspx" />
+    <Content Include="trf_SolicitudesContabilidad.aspx" />
+    <Content Include="trf_SolicitudesDireccion.aspx" />
+    <Content Include="trf_SolicitudesPagadas.aspx" />
+    <Content Include="trf_SolicitudesRegistro.aspx" />
+    <Content Include="BuscarBeneficiario.aspx" />
+    <Content Include="css\cxpcxc.css" />
+    <Content Include="css\menuhrz.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="espera.aspx" />
+    <Content Include="img\bg.jpg" />
+    <Content Include="js\jquery-2.2.1.min.js" />
+    <Content Include="menushtml\admsys.html" />
+    <Content Include="pruebas.aspx" />
+    <Content Include="trf_SolictudesCoordinador.aspx" />
+    <Content Include="trf_AltaSolRecibo.aspx" />
+    <Content Include="trf_SolRequierenFactura.aspx" />
+    <Content Include="trf_AltaSolSinFactura.aspx" />
+    <Content Include="salir.aspx" />
+    <Content Include="trf_VerComprobanteFondos.aspx" />
+    <Content Include="trf_VerFactura.aspx" />
+    <Content Include="trf_VerComprobante.aspx" />
+    <Content Include="trf_VerSolDireccion.aspx" />
+    <Content Include="trf_VerSolicitud.aspx" />
+    <Content Include="trf_VeSolFacturaFondos.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admAcceso.aspx.cs">
+      <DependentUpon>admAcceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admAcceso.aspx.designer.cs">
+      <DependentUpon>admAcceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admCatCodicionPago.aspx.cs">
+      <DependentUpon>admCatCodicionPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCatCodicionPago.aspx.designer.cs">
+      <DependentUpon>admCatCodicionPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admCatEmpresas.aspx.cs">
+      <DependentUpon>admCatEmpresas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCatEmpresas.aspx.designer.cs">
+      <DependentUpon>admCatEmpresas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admCatFormasPago.aspx.cs">
+      <DependentUpon>admCatFormasPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCatFormasPago.aspx.designer.cs">
+      <DependentUpon>admCatFormasPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admCatProyectos.aspx.cs">
+      <DependentUpon>admCatProyectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCatProyectos.aspx.designer.cs">
+      <DependentUpon>admCatProyectos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admCatRechazos.aspx.cs">
+      <DependentUpon>admCatRechazos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCatRechazos.aspx.designer.cs">
+      <DependentUpon>admCatRechazos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admCatServicios.aspx.cs">
+      <DependentUpon>admCatServicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCatServicios.aspx.designer.cs">
+      <DependentUpon>admCatServicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admCatUnidadNegocio.aspx.cs">
+      <DependentUpon>admCatUnidadNegocio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCatUnidadNegocio.aspx.designer.cs">
+      <DependentUpon>admCatUnidadNegocio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admClientesEmpresas.aspx.cs">
+      <DependentUpon>admClientesEmpresas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admClientesEmpresas.aspx.designer.cs">
+      <DependentUpon>admClientesEmpresas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admConfirmaAcceso.aspx.cs">
+      <DependentUpon>admConfirmaAcceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admConfirmaAcceso.aspx.designer.cs">
+      <DependentUpon>admConfirmaAcceso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admCuentas.aspx.cs">
+      <DependentUpon>admCuentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCuentas.aspx.designer.cs">
+      <DependentUpon>admCuentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admEmpresasProyectos.aspx.cs">
+      <DependentUpon>admEmpresasProyectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admEmpresasProyectos.aspx.designer.cs">
+      <DependentUpon>admEmpresasProyectos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admEmpresasUDN.aspx.cs">
+      <DependentUpon>admEmpresasUDN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admEmpresasUDN.aspx.designer.cs">
+      <DependentUpon>admEmpresasUDN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admInfraestructura.aspx.cs">
+      <DependentUpon>admInfraestructura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admInfraestructura.aspx.designer.cs">
+      <DependentUpon>admInfraestructura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admProveedor.aspx.cs">
+      <DependentUpon>admProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admProveedor.aspx.designer.cs">
+      <DependentUpon>admProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admUsuarios.aspx.cs">
+      <DependentUpon>admUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admUsuarios.aspx.designer.cs">
+      <DependentUpon>admUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csGeneral.cs" />
+    <Compile Include="admCatClientes.aspx.cs">
+      <DependentUpon>admCatClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admCatClientes.aspx.designer.cs">
+      <DependentUpon>admCatClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_AgregaPagoGrupo.aspx.cs">
+      <DependentUpon>cxc_AgregaPagoGrupo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_AgregaPagoGrupo.aspx.designer.cs">
+      <DependentUpon>cxc_AgregaPagoGrupo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_AltaOrdenServicio2.aspx.cs">
+      <DependentUpon>cxc_AltaOrdenServicio2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_AltaOrdenServicio2.aspx.designer.cs">
+      <DependentUpon>cxc_AltaOrdenServicio2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_AlterarEstadoPartida.aspx.cs">
+      <DependentUpon>cxc_AlterarEstadoPartida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_AlterarEstadoPartida.aspx.designer.cs">
+      <DependentUpon>cxc_AlterarEstadoPartida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_ConsultaContabilidad.aspx.cs">
+      <DependentUpon>cxc_ConsultaContabilidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_ConsultaContabilidad.aspx.designer.cs">
+      <DependentUpon>cxc_ConsultaContabilidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_ConsultaDireccion.aspx.cs">
+      <DependentUpon>cxc_ConsultaDireccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_ConsultaDireccion.aspx.designer.cs">
+      <DependentUpon>cxc_ConsultaDireccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_ConsultaOrdFactura_Sol_xCliente.aspx.cs">
+      <DependentUpon>cxc_ConsultaOrdFactura_Sol_xCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_ConsultaOrdFactura_Sol_xCliente.aspx.designer.cs">
+      <DependentUpon>cxc_ConsultaOrdFactura_Sol_xCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_PendientesXCobrar.aspx.cs">
+      <DependentUpon>cxc_PendientesXCobrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_PendientesXCobrar.aspx.designer.cs">
+      <DependentUpon>cxc_PendientesXCobrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_ConsultaOrdFactura_Sol.aspx.cs">
+      <DependentUpon>cxc_ConsultaOrdFactura_Sol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_ConsultaOrdFactura_Sol.aspx.designer.cs">
+      <DependentUpon>cxc_ConsultaOrdFactura_Sol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_ConsultaOrdServicioModificar.aspx.cs">
+      <DependentUpon>cxc_ConsultaOrdServicioModificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_ConsultaOrdServicioModificar.aspx.designer.cs">
+      <DependentUpon>cxc_ConsultaOrdServicioModificar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_OrdenServicioModificar.aspx.cs">
+      <DependentUpon>cxc_OrdenServicioModificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_OrdenServicioModificar.aspx.designer.cs">
+      <DependentUpon>cxc_OrdenServicioModificar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_PendientesCobro.aspx.cs">
+      <DependentUpon>cxc_PendientesCobro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_PendientesCobro.aspx.designer.cs">
+      <DependentUpon>cxc_PendientesCobro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_ProyeccionCobranza.aspx.cs">
+      <DependentUpon>cxc_ProyeccionCobranza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_ProyeccionCobranza.aspx.designer.cs">
+      <DependentUpon>cxc_ProyeccionCobranza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_RegistroMontosVariables.aspx.cs">
+      <DependentUpon>cxc_RegistroMontosVariables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_RegistroMontosVariables.aspx.designer.cs">
+      <DependentUpon>cxc_RegistroMontosVariables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_repCobranzaReal.aspx.cs">
+      <DependentUpon>cxc_repCobranzaReal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_repCobranzaReal.aspx.designer.cs">
+      <DependentUpon>cxc_repCobranzaReal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_SeleccionarSolPago.aspx.cs">
+      <DependentUpon>cxc_SeleccionarSolPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_SeleccionarSolPago.aspx.designer.cs">
+      <DependentUpon>cxc_SeleccionarSolPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_ConsultaOrdServicio.aspx.cs">
+      <DependentUpon>cxc_ConsultaOrdServicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_ConsultaOrdServicio.aspx.designer.cs">
+      <DependentUpon>cxc_ConsultaOrdServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_AgregaPago.aspx.cs">
+      <DependentUpon>cxc_AgregaPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_AgregaPago.aspx.designer.cs">
+      <DependentUpon>cxc_AgregaPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_EstadoFacturacion.aspx.cs">
+      <DependentUpon>cxc_EstadoFacturacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_EstadoFacturacion.aspx.designer.cs">
+      <DependentUpon>cxc_EstadoFacturacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_SeleccionaGrupoPago.aspx.cs">
+      <DependentUpon>cxc_SeleccionaGrupoPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_SeleccionaGrupoPago.aspx.designer.cs">
+      <DependentUpon>cxc_SeleccionaGrupoPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_SolicitudesFacturacion.aspx.cs">
+      <DependentUpon>cxc_SolicitudesFacturacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_SolicitudesFacturacion.aspx.designer.cs">
+      <DependentUpon>cxc_SolicitudesFacturacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_AltaOrdenServicio.aspx.cs">
+      <DependentUpon>cxc_AltaOrdenServicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_AltaOrdenServicio.aspx.designer.cs">
+      <DependentUpon>cxc_AltaOrdenServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_AgregarFacturas.aspx.cs">
+      <DependentUpon>cxc_AgregarFacturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_AgregarFacturas.aspx.designer.cs">
+      <DependentUpon>cxc_AgregarFacturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_VerOrdenFactura.aspx.cs">
+      <DependentUpon>cxc_VerOrdenFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_VerOrdenFactura.aspx.designer.cs">
+      <DependentUpon>cxc_VerOrdenFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxc_VerOrdenServicio.aspx.cs">
+      <DependentUpon>cxc_VerOrdenServicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxc_VerOrdenServicio.aspx.designer.cs">
+      <DependentUpon>cxc_VerOrdenServicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxpcxcSeleccionaEmpresa.aspx.cs">
+      <DependentUpon>cxpcxcSeleccionaEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxpcxcSeleccionaEmpresa.aspx.designer.cs">
+      <DependentUpon>cxpcxcSeleccionaEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxpcxcTotales.aspx.cs">
+      <DependentUpon>cxpcxcTotales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxpcxcTotales.aspx.designer.cs">
+      <DependentUpon>cxpcxcTotales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxpcxc_Grande.Master.cs">
+      <DependentUpon>cxpcxc_Grande.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxpcxc_Grande.Master.designer.cs">
+      <DependentUpon>cxpcxc_Grande.Master</DependentUpon>
+    </Compile>
+    <Compile Include="esperaV1.aspx.cs">
+      <DependentUpon>esperaV1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="esperaV1.aspx.designer.cs">
+      <DependentUpon>esperaV1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AgregaArchivosSinFactura.aspx.cs">
+      <DependentUpon>trf_AgregaArchivosSinFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AgregaArchivosSinFactura.aspx.designer.cs">
+      <DependentUpon>trf_AgregaArchivosSinFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AgregaMarcaPrioridad.aspx.cs">
+      <DependentUpon>trf_AgregaMarcaPrioridad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AgregaMarcaPrioridad.aspx.designer.cs">
+      <DependentUpon>trf_AgregaMarcaPrioridad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AltaNotaCredito.aspx.cs">
+      <DependentUpon>trf_AltaNotaCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AltaNotaCredito.aspx.designer.cs">
+      <DependentUpon>trf_AltaNotaCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AltaSolConFactura.aspx.cs">
+      <DependentUpon>trf_AltaSolConFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AltaSolConFactura.aspx.designer.cs">
+      <DependentUpon>trf_AltaSolConFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AutorizarProcesar.aspx.cs">
+      <DependentUpon>trf_AutorizarProcesar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AutorizarProcesar.aspx.designer.cs">
+      <DependentUpon>trf_AutorizarProcesar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AutorizaFondosConsulta.aspx.cs">
+      <DependentUpon>trf_AutorizaFondosConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AutorizaFondosConsulta.aspx.designer.cs">
+      <DependentUpon>trf_AutorizaFondosConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AutorizaFondosConsultaDet.aspx.cs">
+      <DependentUpon>trf_AutorizaFondosConsultaDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AutorizaFondosConsultaDet.aspx.designer.cs">
+      <DependentUpon>trf_AutorizaFondosConsultaDet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AutorizarDinamica.aspx.cs">
+      <DependentUpon>trf_AutorizarDinamica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AutorizarDinamica.aspx.designer.cs">
+      <DependentUpon>trf_AutorizarDinamica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AutorizarFondos.aspx.cs">
+      <DependentUpon>trf_AutorizarFondos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AutorizarFondos.aspx.designer.cs">
+      <DependentUpon>trf_AutorizarFondos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AutorizarFondosDetalle.aspx.cs">
+      <DependentUpon>trf_AutorizarFondosDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AutorizarFondosDetalle.aspx.designer.cs">
+      <DependentUpon>trf_AutorizarFondosDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_VerSolAutorizacion.aspx.cs">
+      <DependentUpon>trf_VerSolAutorizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_VerSolAutorizacion.aspx.designer.cs">
+      <DependentUpon>trf_VerSolAutorizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_BuscaEmpresa.aspx.cs">
+      <DependentUpon>trf_BuscaEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_BuscaEmpresa.aspx.designer.cs">
+      <DependentUpon>trf_BuscaEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_CambioProveedor.aspx.cs">
+      <DependentUpon>trf_CambioProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_CambioProveedor.aspx.designer.cs">
+      <DependentUpon>trf_CambioProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_ConsultaGralSolicitudes.aspx.cs">
+      <DependentUpon>trf_ConsultaGralSolicitudes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_ConsultaGralSolicitudes.aspx.designer.cs">
+      <DependentUpon>trf_ConsultaGralSolicitudes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_ConsultaNotaCredito.aspx.cs">
+      <DependentUpon>trf_ConsultaNotaCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_ConsultaNotaCredito.aspx.designer.cs">
+      <DependentUpon>trf_ConsultaNotaCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_MoficarSolicitud.aspx.cs">
+      <DependentUpon>trf_MoficarSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_MoficarSolicitud.aspx.designer.cs">
+      <DependentUpon>trf_MoficarSolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_VerNotaCredito.aspx.cs">
+      <DependentUpon>trf_VerNotaCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_VerNotaCredito.aspx.designer.cs">
+      <DependentUpon>trf_VerNotaCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_PagoSolicitud.aspx.cs">
+      <DependentUpon>trf_PagoSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_PagoSolicitud.aspx.designer.cs">
+      <DependentUpon>trf_PagoSolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_RegistroPagos.aspx.cs">
+      <DependentUpon>trf_RegistroPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_RegistroPagos.aspx.designer.cs">
+      <DependentUpon>trf_RegistroPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_Rep_pendientes.aspx.cs">
+      <DependentUpon>trf_Rep_pendientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_Rep_pendientes.aspx.designer.cs">
+      <DependentUpon>trf_Rep_pendientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_SeguimientoLote.aspx.cs">
+      <DependentUpon>trf_SeguimientoLote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_SeguimientoLote.aspx.designer.cs">
+      <DependentUpon>trf_SeguimientoLote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AutorizarMarcacion.aspx.cs">
+      <DependentUpon>trf_AutorizarMarcacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AutorizarMarcacion.aspx.designer.cs">
+      <DependentUpon>trf_AutorizarMarcacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_SolicitudesContabilidad.aspx.cs">
+      <DependentUpon>trf_SolicitudesContabilidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_SolicitudesContabilidad.aspx.designer.cs">
+      <DependentUpon>trf_SolicitudesContabilidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_SolicitudesDireccion.aspx.cs">
+      <DependentUpon>trf_SolicitudesDireccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_SolicitudesDireccion.aspx.designer.cs">
+      <DependentUpon>trf_SolicitudesDireccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_SolicitudesPagadas.aspx.cs">
+      <DependentUpon>trf_SolicitudesPagadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_SolicitudesPagadas.aspx.designer.cs">
+      <DependentUpon>trf_SolicitudesPagadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_SolicitudesRegistro.aspx.cs">
+      <DependentUpon>trf_SolicitudesRegistro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_SolicitudesRegistro.aspx.designer.cs">
+      <DependentUpon>trf_SolicitudesRegistro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarBeneficiario.aspx.cs">
+      <DependentUpon>BuscarBeneficiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuscarBeneficiario.aspx.designer.cs">
+      <DependentUpon>BuscarBeneficiario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cxpcxc.Master.cs">
+      <DependentUpon>cxpcxc.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cxpcxc.Master.designer.cs">
+      <DependentUpon>cxpcxc.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="espera.aspx.cs">
+      <DependentUpon>espera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="espera.aspx.designer.cs">
+      <DependentUpon>espera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pruebas.aspx.cs">
+      <DependentUpon>pruebas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pruebas.aspx.designer.cs">
+      <DependentUpon>pruebas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_SolictudesCoordinador.aspx.cs">
+      <DependentUpon>trf_SolictudesCoordinador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_SolictudesCoordinador.aspx.designer.cs">
+      <DependentUpon>trf_SolictudesCoordinador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AltaSolRecibo.aspx.cs">
+      <DependentUpon>trf_AltaSolRecibo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AltaSolRecibo.aspx.designer.cs">
+      <DependentUpon>trf_AltaSolRecibo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_SolRequierenFactura.aspx.cs">
+      <DependentUpon>trf_SolRequierenFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_SolRequierenFactura.aspx.designer.cs">
+      <DependentUpon>trf_SolRequierenFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_AltaSolSinFactura.aspx.cs">
+      <DependentUpon>trf_AltaSolSinFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_AltaSolSinFactura.aspx.designer.cs">
+      <DependentUpon>trf_AltaSolSinFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="salir.aspx.cs">
+      <DependentUpon>salir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="salir.aspx.designer.cs">
+      <DependentUpon>salir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_VerComprobanteFondos.aspx.cs">
+      <DependentUpon>trf_VerComprobanteFondos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_VerComprobanteFondos.aspx.designer.cs">
+      <DependentUpon>trf_VerComprobanteFondos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_VerFactura.aspx.cs">
+      <DependentUpon>trf_VerFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_VerFactura.aspx.designer.cs">
+      <DependentUpon>trf_VerFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_VerComprobante.aspx.cs">
+      <DependentUpon>trf_VerComprobante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_VerComprobante.aspx.designer.cs">
+      <DependentUpon>trf_VerComprobante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_VerSolDireccion.aspx.cs">
+      <DependentUpon>trf_VerSolDireccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_VerSolDireccion.aspx.designer.cs">
+      <DependentUpon>trf_VerSolDireccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_VerSolicitud.aspx.cs">
+      <DependentUpon>trf_VerSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_VerSolicitud.aspx.designer.cs">
+      <DependentUpon>trf_VerSolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trf_VeSolFacturaFondos.aspx.cs">
+      <DependentUpon>trf_VeSolFacturaFondos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trf_VeSolFacturaFondos.aspx.designer.cs">
+      <DependentUpon>trf_VeSolFacturaFondos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilerias\Comun.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilerias\LlenarControles.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cxpcxc.Master" />
+    <Content Include="cxpcxc_Grande.Master" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\cxpcxc.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cxc_doc\" />
+    <Folder Include="cxp_doc\" />
+    <Folder Include="Descargas\" />
+    <Folder Include="documentos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cpplib\cpplib.csproj">
+      <Project>{d0a912ae-af2f-45b5-a0f7-3ce402971495}</Project>
+      <Name>cpplib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CXPCXC.Datos\CXPCXC.Datos.csproj">
+      <Project>{56dd67e1-af5d-47da-bdb6-b92437f7728c}</Project>
+      <Name>CXPCXC.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CXPCXC.Modelos\CXPCXC.Modelos.csproj">
+      <Project>{6c96439f-ebb1-4f34-8264-b35a6ef0c4a1}</Project>
+      <Name>CXPCXC.Modelos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CXPCXC.Negocio\CXPCXC.Negocio.csproj">
+      <Project>{9636ebc6-e9fd-4c6e-a71c-9e42e6bd765d}</Project>
+      <Name>CXPCXC.Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seguridad\Seguridad.csproj">
+      <Project>{0dbbc7f6-bacb-4cbb-a42f-2e3306af18c4}</Project>
+      <Name>Seguridad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="rpPendientes.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="rpPendientesGral.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50024</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50024/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:50024/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
